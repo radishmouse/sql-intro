@@ -1,0 +1,25 @@
+{
+  "name": "sql-intro",
+  "version": "1.0.0",
+  "description": "- How to create a database     - `createdb albums-browser` (this is a bash command) - How to connect to a database:     - from the command line:         - `psql albums-browser`     - from postico (if you've never connected):         - Add a new favorite         - Enter the name of your database         - Leave the other fields blank         - Click \"Done\"         - Click \"Connect\" - How to create tables     - `create table` - How to insert information into tables     - `INSERT` - How to retrieve information from tables     - `SELECT`         - ...specific column names         - `WHERE`         - `LIMIT`         - `ORDERBY`",
+  "main": "index.js",
+  "scripts": {
+    "db:delete": "dropdb albums-browser",
+    "db:create": "createdb albums-browser",
+    "db:schema": "psql -f schema.sql albums-browser",
+    "db:seed": "psql -f seed.sql albums-browser",
+    "db:reset": "npm run db:delete && npm run db:create && npm run db:schema && npm run db:seed",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/radishmouse/sql-intro.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/radishmouse/sql-intro/issues"
+  },
+  "homepage": "https://github.com/radishmouse/sql-intro#readme"
+}
