@@ -1,5 +1,22 @@
+-- inserting data
+insert into albums
+		(title, artist, genre)
+	values
+		('bitches brew', 'miles davis', 'jazz'),
+		('live from folsom prison', 'johnny cash', 'country'),	
+		('charlie brown christmas', 'vince guaraldi', 'jazz')
+	;
+
+-- To select a specific column:
+select title from albums;
+
+-- To select multiple specific columns:
+select genre, title from albums;
+
 -- * means all columns
 select * from albums;
+
+
 
 -- text searching
 select * from albums where genre='country'; -- exact match
@@ -17,16 +34,3 @@ select title from albums order by artist limit 2; -- "order by" must come before
 select * from albums order by artist; -- how do I do case insensitive ordering?
 -- select * from albums order by artist collate nocase; -- why no worky?
 
-insert into albums
-		(title, artist, genre)
-	values
-		('bitches brew', 'miles davis', 'jazz'),
-		('live from folsom prison', 'johnny cash', 'country'),	
-		('charlie brown christmas', 'vince guaraldi', 'jazz')
-	;
-
--- To select a specific column:
-select title from albums;
-
--- To select multiple specific columns:
-select genre, title from albums;
